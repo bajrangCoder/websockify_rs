@@ -22,16 +22,15 @@ detect_arch() {
 # Function to download the appropriate binary
 download_binary() {
     ARCH=$(detect_arch)
-    BASE_URL="https://github.com/bajrangCoder/websockify_rs/releases/download/latest"
+    BASE_URL="https://github.com/bajrangCoder/websockify_rs/releases/latest/download"
 
     FILE_NAME="websockify_rs-$ARCH"
     DOWNLOAD_URL="$BASE_URL/$FILE_NAME"
 
     # Download the binary
     echo "Downloading $FILE_NAME for $ARCH architecture..."
-    curl -LO $DOWNLOAD_URL
 
-    if [ $? -ne 0 ]; then
+    if ! curl --progress-bar --fail -L "$DOWNLOAD_URL" -o "$FILE_NAME"; then
         echo "Failed to download the binary!"
         exit 1
     fi

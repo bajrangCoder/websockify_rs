@@ -15,5 +15,5 @@ cargo run -- <source_addr:port> <target_addr:port>
 As it serves binary for few platforms, you can download it using this
 
 ```bash
-curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/installServer.sh | bash
+curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
 ```
