@@ -9,11 +9,14 @@ detect_arch() {
         aarch64)
             echo "aarch64"
             ;;
+        armv8l)
+            echo "aarch64"
+            ;;
         x86_64)
             echo "x86_64"
             ;;
         *)
-            echo "Unsupported architecture"
+            echo "Unsupported architecture, Create a issue and we will start to provide binary for your architecture"
             exit 1
             ;;
     esac
