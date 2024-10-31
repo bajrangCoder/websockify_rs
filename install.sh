@@ -6,17 +6,14 @@ detect_arch() {
         armv7l)
             echo "armv7"
             ;;
-        aarch64)
-            echo "aarch64"
-            ;;
-        armv8l)
+        aarch64 | armv8l)
             echo "aarch64"
             ;;
         x86_64)
             echo "x86_64"
             ;;
         *)
-            echo "Unsupported architecture, Create a issue and we will start to provide binary for your architecture"
+            echo "Unsupported architecture. Please create an issue, and we will consider providing a binary for your architecture."
             exit 1
             ;;
     esac
